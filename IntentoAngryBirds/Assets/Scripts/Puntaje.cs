@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Puntaje : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class Puntaje : MonoBehaviour
     public TextMeshProUGUI textoTiros;
     public GameObject pantallaGanaste;
     public GameObject pantallaPerdiste; 
-    public int tirosDisponibles = 3; 
+    public int tirosDisponibles = 5; 
     private int puntaje = 0;
     private int totalCerditos;
 
@@ -52,4 +53,9 @@ public class Puntaje : MonoBehaviour
     {
         textoTiros.text = "Pájaros: " + tirosDisponibles;
     }
+    public void ReiniciarJuego()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
 }
