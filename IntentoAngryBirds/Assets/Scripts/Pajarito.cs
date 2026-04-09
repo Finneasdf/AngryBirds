@@ -44,7 +44,10 @@ public class Pajarito : MonoBehaviour
 
         float regreso = 5f;
         Invoke("Reinicio", regreso);
-        
+
+        Puntaje.instancia.UsarTiro();
+
+
     }
 
     private void Reinicio()
