@@ -3,12 +3,18 @@ using UnityEngine;
 
 public class Pajarito : MonoBehaviour
 {
+    private Controles inputActions;
     private Rigidbody2D rb;
     private Camera mainCamera;
     private Vector3 posicionInicial, limitePosicion;
 
     public float force;
     public float maxDis;
+
+    private void Awake()
+    {
+        inputActions = new Controles();
+    }
 
     void Start()
     {
